@@ -7,10 +7,13 @@ class Password {
   Password({password}) : _password = password;
 
   bool isValid() {
+    print(_password);
     if ((this._password?.length ?? 0) > 6 &&
         (this._password?.length ?? 0) < 18) {
-      if (this._password!.contains(RegExp(r'[a-zA-Z]'))) {
+      if (this._password!.contains(RegExp(r"(?=.*[a-z])(?=.*[A-Z])\w+"))) {
         if (this._password!.contains(RegExp(r'\d'))) {
+          print(true);
+
           return true;
         }
       }
