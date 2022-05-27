@@ -1,16 +1,10 @@
 class Password {
-  String? _password;
-  Password({required String? password}) {
-    this.password = password;
-  }
+  String? _password = "";
 
-  String get password {
-    return this._password!;
-  }
+  String get password => _password!;
 
-  void set password(String? value) {
-    this._password = value;
-  }
+  set password(String password) => _password = password;
+  Password({password}) : _password = password;
 
   bool isValid() {
     if ((this._password?.length ?? 0) > 6 &&

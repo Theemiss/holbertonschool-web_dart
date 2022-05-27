@@ -1,23 +1,19 @@
 import '6-password.dart';
 
 class User extends Password {
+  int? id;
   String name;
-  int id;
   int age;
   double height;
   String? user_password;
 
+  User(
+      {int? this.id,
+      required this.name,
+      required this.age,
+      required this.height,
+      String? this.user_password});
 
-  User({
-    user_password,
-    required this.id,
-    required this.name,
-    required this.age,
-    required this.height,
-  }) : super(password: user_password);
-  
-  
-  
   Map toJson() {
     return {"id": id, "name": name, "age": age, "height": height};
   }
