@@ -4,6 +4,6 @@ getUser() async {
   try {
     print(await fetchUser());
   } catch (e) {
-    print(e);
+    print("error caught: $e");
   }
 }
