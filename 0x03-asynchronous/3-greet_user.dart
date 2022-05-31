@@ -5,7 +5,7 @@ greetUser() async {
   try {
     var data = await fetchUserData();
     var user = json.decode(data);
-
+    return "Hello ${user['username']}";
   } catch (error) {
     return ("error caught: ${error}");
   }
