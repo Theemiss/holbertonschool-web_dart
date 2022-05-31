@@ -12,6 +12,6 @@ Future<String> generateQuote(id) async {
       return "${name} : ${quote}";
     }
   } catch (error) {
-    return "There is no quotes";
+    return "There are no quotes";
   }
 }
