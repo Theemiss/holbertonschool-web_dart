@@ -16,7 +16,7 @@ loginUser() async {
   try {
     var check = await checkCredentials();
     if (check == true) {
-      return loginUser();
+      return greetUser();
     } else {
       return "Wrong credentials";
     }
